@@ -1,0 +1,107 @@
+html,body{
+	height: 100%;
+}
+body{
+	background:url(../images/login-3.jpg) no-repeat;
+	background-size: 100% 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: 0 0 0 #ccc;
+}
+.content{
+	width:1050px;
+	height:630px;
+	position: absolute;
+	top:0;left:0;right:0;bottom:0;
+	margin:auto;	
+}
+.logo{
+	height:70px;
+	-background: -webkit-linear-gradient(top,#0D648E,#3C88E0);
+	background:#0D648E;
+	overflow: hidden;
+}
+.logo>img{
+	height:calc(100% - 10px);
+	margin-top:5px;
+	padding-left:17.5px;
+}
+.nav{
+	display: inline-block;
+	float:left;
+	width:140px;
+	height:560px;
+	background:rgba(192,192,192,0.4);
+	overflow: hidden;
+}
+.nav>.userImg{
+	width:105px;
+	height:105px;
+	text-align: center;
+	line-height: 105px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin:17px;
+	background:#0D648E;
+	color:white;
+}
+.nav>.navlist{
+	width:100%;
+	overflow: hidden;
+}
+.nav>.navlist>li,p{
+	width:96.25px;
+	height:35px;
+	background:#0D648E;
+	border-radius: 5px;
+	line-height: 35px;
+	text-align: center;
+	color:white;
+	margin:5px auto;	
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	font-size: 16px;
+}
+.nav>.navlist>li>span{
+	margin-right:8.75px;
+}
+.nav>.navlist>li:last-child{
+	margin-bottom:20px;
+}
+.nav>.navlist>p>span{
+	margin-right:8.75px;
+}
+.nubnav{
+	display: inline-block;
+	float:left;
+	width:104.25px;
+	height:560px;
+	background:rgba(255,255,255,0.5);
+	margin-left:2px;
+	overflow: hidden;
+}
+.nubnav>ul{
+	width:100.75px;
+	margin-left:3px;
+	height:525px;
+}
+.nubnav li{
+	width:100.75px;
+	height:42.5px;
+	line-height: 42.5px;
+	text-align: center;
+	background:rgba(192,192,192,0.7);
+	color:#0D648E;
+	border-left:0.5px solid #aaa;
+	box-sizing: border-box;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 18px;
+}
+.contain{
+	display: inline-block;
+	float:left;
+	width:802.25px;
+	height:560px;
+	background:rgba(192,192,192,0.7)
+}
