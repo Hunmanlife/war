@@ -74,7 +74,7 @@ body{
 .nubnav{
 	display: inline-block;
 	float:left;
-	width:104.25px;
+	width:147px;
 	height:560px;
 	background:rgba(255,255,255,0.5);
 	margin-left:2px;
@@ -101,7 +101,7 @@ body{
 .contain{
 	display: inline-block;
 	float:left;
-	width:802.25px;
+	width:760.25px;
 	height:560px;
 	background:rgba(192,192,192,0.7)
 }
