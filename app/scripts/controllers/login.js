@@ -13,7 +13,8 @@
 			}).then(function(data){
 				$scope.showTitle = "登录成功"
 				$scope.show = true;
-				$state.go("contrain")		
+				$state.go("contrain")	
+				$("#supersized").hide()
 			},function(data){
 				$scope.showTitle = "请输入正确的手机号"
 				$scope.show = true;

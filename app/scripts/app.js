@@ -11,6 +11,11 @@
 angular
 .module('App', ['ui.router'])
 .config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+	$stateProvider.state('denglu',{
+		url:"/login",
+		templateUrl:"views/login.html"
+	});
+	
 	$stateProvider.state('contrain',{
 		url:"/contrain",
 		templateUrl:"views/contrain.html"
@@ -22,7 +27,7 @@ angular
 		templateUrl:"views/todayNews.html"	
 	});
 	
-	$urlRouterProvider.when("","/contrain")
+	$urlRouterProvider.when("","/login")
 }])
 
 
