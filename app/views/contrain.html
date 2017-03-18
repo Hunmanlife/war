@@ -1,4 +1,4 @@
-	
+	<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="../styles/container.css"/>
 	<div class="content" ng-controller="contrain">
 			<div class="logo">
@@ -17,32 +17,17 @@
 					<p class="add-person"><span class="glyphicon glyphicon-plus"></span> Add</p>	
 				</div>
 			</div>
+			
 			<div class="nubnav">
-				<ul class="newsInfo">
-					<li>工作通知</li>
-					<li>审批通知</li>
-					<li>团队成员</li>
-				</ul>
-				<!--<ul class="peopleInfo"">
-					<li>陈</li>
-					<li>王</li>
-					<li>杜</li>
-					<li>陈</li>
-					<li>王</li>
-					<li>杜</li>
-				</ul>
 				<ul class="workInfo">
-					<li>日志</li>
+					<li ui-sref=".todayNews">日志</li>
 					<li>审批</li>
 					<li>。。。</li>
 				</ul>
-				<ul class="moreInfo">
-					<li>系统设置</li>
-					<li>修改密码</li>
-					<li>退出登录</li>
-				</ul>-->
 			</div>
-			<div class="contain">
-				
+			<div class="info">
+				 <div ui-view></div>
 			</div>
+			
 		</div>
+		
