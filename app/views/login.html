@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../styles/reset.css">
+		<link rel="stylesheet" href="../styles/reset.css">
         <link rel="stylesheet" href="../styles/supersized.css">
         <link rel="stylesheet" href="../styles/wang.css">  	
     <div ng-controller="denglu">
@@ -7,23 +7,32 @@
      </div>
     <div class="page-container">
     	<div class="home">
-    	<h1>登录</h1>
-          <form action="" method="post">
-                <input type="text" ng-model="username" name="username" class="username" placeholder="手机号">
-                <input type="password" ng-model="password" name="password" class="password" placeholder="密码">
-                <button type="submit" ng-click="longin()">提交</button>
-                <div class="error"><span>+</span></div>
-            </form>
-            <div class="connect">
-                <p>DuWangLiQiGuoChen</p>
-            </div>
-    	</div>	
-        </div>	
-        </div>	
+	    		<h1>登录</h1>
+	         	<form  name="form">
+	                <input type="text" name="username" class="username" placeholder="手机号" ng-model="username"/>
+	                <p class="msg p1">手机号码不正确</p>
+	                <input type="password" name="password" class="password" placeholder="密码" ng-model="passwords"/>
+	                <p class="msg p2">由英文字母与数字组成</p>
+	                <button type="submit" class="next" ng-click="login()">提交</button>
+	                <div class="error"><span>+</span></div>
+	            </form>
+	            <div class="connect">
+	                <p>DuWangLiQiGuoChen</p>
+	            </div>
+	            <div class="chsh" ng-show="show">
+					<p>
+						{{showTitle}}
+					</p>
+				</div>
+	    	</div>
+		</div>	
+    </div>	
         
  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>     	
         <script src="../scripts/controllers/supersized.3.2.7.min.js"></script>
         <script src="../scripts/controllers/supersized-init.js"></script>
+        <script type="text/javascript" src="../scripts/controllers/scripts.js" ></script>
+        <script type="text/javascript" src="../scripts/controllers/angular-1.5.8.js" ></script>
       
 
 
