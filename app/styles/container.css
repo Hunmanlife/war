@@ -116,7 +116,7 @@ body{
 #todayNews>ul{
 	width:100%;
 	height:40px;
-	margin:0;padding:0;
+	margin-top:1px;padding:0;
 }
 #todayNews>ul>li{
 	width:252.6px;
@@ -124,23 +124,34 @@ body{
 	height:40px;
 	line-height: 40px;
 	text-align: center;
-	border:1px solid;
 	float:left;
 	margin-left:.5px;
-	box-sizing: border-box;
+	background:#033F4B;
+	color: white;
 }
 .todayInfo{
 	width:100%;
 	height:520px;
-	-background:lightcyan;
 }
 .todayInfo>p{
-	width:200px;
+	width:252.6px;
 	height:40px;
 	line-height: 40px;
-	background: lightcoral;
+	background: #0D648E;
+	border-radius: 0;
 	display: inline-block;
-	margin:5px 24px;
+	float:left;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	
+	box-sizing: border-box;
+}
+.todayInfo>p:nth-child(1){
+	margin-left:1px;
+}
+.todayInfo>p:nth-child(2){
+	border-left:1px solid #999;
+	border-right:1px solid #999;
 }
 .todayInfo>ul{
 	width:100%;
@@ -151,15 +162,15 @@ body{
 	width:100%;
 	height:150px;
 	margin-bottom:5px;
-	-background:lightblue;
 }
 .todayInfo>ul>li>h3{
 	width:150px;
 	height:30px;
 	line-height: 30px;
 	text-align: center;
-	border:1px solid;
-	box-sizing: border-box;
+	border-radius: 5px;
+	background:#0D648E;
+	color:white;
 }
 .todayInfo>ul>li>div{
 	width:720.25px;
@@ -167,8 +178,13 @@ body{
 	margin-top:10px;
 	float:right;
 	margin-right:5px;
-	background: lightcoral;
+	-background: lightcoral;
 	overflow-y: scroll;
+	border:1px solid #999;
+	box-sizing: border-box;
+	outline: #888;
+	border-radius: 5px;
+	
 }
 .todayInfo>ul>li>a{
 	display: block;
@@ -182,6 +198,7 @@ body{
 	margin:20px;
 }
 .addpeople{
+	display: none;
 	width:200px;
 	height:200px;
 	position: absolute;
