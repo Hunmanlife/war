@@ -19,6 +19,7 @@ angular
 		url:"/contrain",
 		templateUrl:"views/contrain.html"
 	})
+	//工作
 	.state('contrain.todayNews',{
 		url:"/todayNews",
 		templateUrl:"views/todayNews.html"	
@@ -30,7 +31,29 @@ angular
 	.state('contrain.todayNews.shenpixq',{
 		url:"/shenpixq",
 		templateUrl:"views/shenpixq.html"	
-	});
+	})
+	//通知
+	.state('contrain.News',{
+		url:"/News",
+		templateUrl:"views/News.html"	
+	})
+	.state('contrain.News.rizhitz',{
+		url:"/rizhitz",
+		templateUrl:"views/rizhitz.html"	
+	})
+	.state('contrain.News.shenpitz',{
+		url:"/shenpitz",
+		templateUrl:"views/shenpitz.html"	
+	})
+	//联系人
+	.state('contrain.user',{
+		url:"/user",
+		templateUrl:"views/user.html"	
+	})
+	.state('contrain.user.userInfo',{
+		url:"/userInfo",
+		templateUrl:"views/userInfo.html"	
+	})
 	$urlRouterProvider.when("","/login")
 }])
 

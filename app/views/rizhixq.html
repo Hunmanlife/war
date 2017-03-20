@@ -1,15 +1,10 @@
 <div class="info" ng-controller="rizhixq">
 					 
 				
-				<!--<div class="addpeople">
-					<li>深</li>
-					<li>圣诞节</li>
-					<li>速度</li>
-					<li>水电费</li>
-					<li>人</li>
-					<li>是</li>
-				</div>-->
-				<div id="todayNews" ng-controller="todayNews">
+				<div ng-controller="addPeople" class="addpeople" style="display: none;">
+					<li ng-repeat="people in addPeoples">{{people.username}}</li>
+				</div>
+				<div id="todayNews">
 					<ul>
 						<li>发日志</li>
 						<li>我发出的</li>

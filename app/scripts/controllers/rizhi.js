@@ -21,7 +21,20 @@
 				$(".todayInfo>ul").css("display","none");
 				$(".todayInfo>ul").eq($(this).index()).css("display","block");
 			})
+			//添加发送人
+			$(".todayInfo>ul>li>a").click(function(){
+				$(".addpeople").css("display","block")
+			})
 		})
 	})
+	.controller("addPeople",["$scope","$http","$state",function($scope,$http,$state){
+		$http({
+			url:"http://47.88.16.225:402/users",
+			method:"get",	
+		}).then(function(data){
+			$scope.addPeoples=data.data
+		})
+		
+	}])
 	
 			

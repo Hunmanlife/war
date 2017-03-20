@@ -149,6 +149,7 @@ body{
 .todayInfo{
 	width:100%;
 	height:520px;
+	background:rgba(13,100,142,0.3)
 }
 .todayInfo_post{
 	width:100%;
@@ -302,13 +303,13 @@ body{
 	margin-top:10px;
 	float:right;
 	margin-right:5px;
-	-background: lightcoral;
 	overflow-y: scroll;
-	border:1px solid #999;
+	border:1px solid #ccc;
 	box-sizing: border-box;
 	outline: #888;
 	border-radius: 5px;
-	
+	color:white;
+	line-height: 20px;
 }
 .todayInfo>ul>li>a{
 	display: block;
@@ -317,7 +318,7 @@ body{
 	font-size: 50px;
 	text-align: center;
 	line-height: 50px;
-	border-radius: 50%;
+	border:none;
 	text-decoration: none;
 	margin:20px;
 }
@@ -329,7 +330,8 @@ body{
 	top:0;left:0;right:0;bottom:0;
 	margin:auto;
 	overflow-y: scroll;
-	background:rgba(255,255,255,0.7)
+	background:rgba(13,100,142,0.3);
+	color:white;
 }
 
 .addpeople>li{
