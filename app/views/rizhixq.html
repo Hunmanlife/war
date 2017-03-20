@@ -1,4 +1,4 @@
-<div class="info">
+<div class="info" ng-controller="rizhixq">
 					 
 				
 				<!--<div class="addpeople">
@@ -20,7 +20,7 @@
 					<p>日报</p>
 					<p>周报</p>
 					<p>月报</p>
-					<ul style="display: none;">
+					<ul>
 						<li>
 							<h3>今日完成工作</h3>
 							<div contenteditable="true"></div>
@@ -70,7 +70,7 @@
 						</li>
 						<p>提交</p>
 					</ul>
-					<ul>
+					<ul style="display: none;">
 						<li>
 							<h3>本月工作计划</h3>
 							<div contenteditable="true"></div>
@@ -98,7 +98,7 @@
 						<p>提交</p>
 					</ul>
 				</div>
-				<div class="todayInfo_post">
+				<div class="todayInfo todayInfo_post" style="display: none;">
 					<li>
 						<div class="headInfo">
 							<p>二狗</p><span>月报</span>
@@ -114,4 +114,21 @@
 						</div>
 					</li>
 				</div>
+				<div class="todayInfo todayInfo_get" style="display: none;">
+					<li>
+						<div class="headInfo">
+							<p>二狗</p><span>月报</span>
+						</div>
+						<div class="Info">
+							<p>本月工作计划：<span>1234</span></p>
+							<p>本月工作总结：<span>1234</span></p>
+							<p>下月工作计划：<span>1234</span></p>
+						</div>
+						<div class="footInfo">
+							<span>03月15日 08:21</span>
+							<button>查看详情</button>
+							<button>删除</button>
+						</div>
+					</li>
 				</div>
+</div>
