@@ -1,49 +1,11 @@
 <!--<div ng-controller="todayNews">-->
-				<div class="addpeople">
-					<li>深</li>
-					<li>圣诞节</li>
-					<li>速度</li>
-					<li>水电费</li>
-					<li>人</li>
-					<li>是</li>
-				</div>
-				<div id="todayNews" ng-controller="todayNews">
-					<ul>
-						<li>发日志</li>
-						<li>我发出的</li>
-						<li>我收到的</li>
+				<div class="nubnav">
+					<ul class="workInfo">
+						<li ui-sref=".rizhixq" class="rizhi">日志</li>
+						<li>审批</li>
 					</ul>
 				</div>
-				<div class="todayInfo">
-					<p>日报</p>
-					<p>周报</p>
-					<p>月报</p>
-					<ul>
-						<li>
-							<h3>今日完成工作</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>未完成工作</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>需调谐的工作</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>备注</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>今日完成工作</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>发送给</h3>
-							<a href="javascript:;" class="	glyphicon glyphicon-plus-sign"></a>
-						</li>
-						<p>提交</p>
-					</ul>
+				<div>
+					<ui-view></ui-view>
 				</div>
 <!--</div>-->

@@ -23,9 +23,14 @@ angular
 	
 	
 	$stateProvider.state('contrain.todayNews',{
-		url:"/contrain/todayNews",
+		url:"/todayNews",
 		templateUrl:"views/todayNews.html"	
 	});
+	$stateProvider.state('contrain.todayNews.rizhixq',{
+		url:"/rizhixq",
+		templateUrl:"views/rizhixq.html"	
+	});
+	
 	
 	$urlRouterProvider.when("","/login")
 }])

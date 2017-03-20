@@ -13,7 +13,7 @@
 //		$scope.gao=function(){
 				$(function(){
 					$("#todayNews>ul>li").click(function(){
-						$(this).css("background","#099DBD").siblings().css("background","#0D648E")
+						$(this).css("background","#099DBD").siblings().css("background","#033F4B")
 					})
 				})
 //		}

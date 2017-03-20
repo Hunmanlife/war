@@ -11,22 +11,13 @@
 				<div class="navlist">
 					<li><span class="glyphicon glyphicon-comment"></span>News</li>
 					<li><span class="glyphicon glyphicon-user"></span>User</li>
-					<li><span class="glyphicon glyphicon-tasks"></span>Work</li>
+					<li ui-sref=".todayNews" ng-click="tiao()"><span class="glyphicon glyphicon-tasks"></span>Work</li>
 					<p><span class="glyphicon glyphicon-envelope"></span>Email</p>
 					<p><span class="glyphicon glyphicon-th-large"></span>More</p>
 					<p class="add-person"><span class="glyphicon glyphicon-plus"></span> Add</p>	
 				</div>
 			</div>
-			
-			<div class="nubnav">
-				<ul class="workInfo">
-					<li ui-sref=".todayNews" ng-click="tiao()" class="rizhi">日志</li>
-					<li>审批</li>
-					<li>。。。</li>
-				</ul>
+			<div class="workShowBg">
+				<ui-view></ui-view>
 			</div>
-			<div class="info">
-				 <div ui-view></div>
-			</div>
-			
 	</div>
