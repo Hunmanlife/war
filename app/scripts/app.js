@@ -26,6 +26,10 @@ angular
 	.state('contrain.todayNews.rizhixq',{
 		url:"/rizhixq",
 		templateUrl:"views/rizhixq.html"	
+	})
+	.state('contrain.todayNews.shenpixq',{
+		url:"/shenpixq",
+		templateUrl:"views/shenpixq.html"	
 	});
 	$urlRouterProvider.when("","/login")
 }])

@@ -64,6 +64,16 @@ body{
 	position: relative;
 	font-size: 16px;
 }
+.nav>.navlist>p>a{
+	color: white;
+	list-style: none;
+	text-decoration: none;
+	display: inline-block;
+}
+.nav>.navlist>p>a>span:nth-child(2){
+	display: inline-block;
+	margin-left: 10px;
+}
 .nav>.navlist>li>span{
 	margin-right:8.75px;
 }
