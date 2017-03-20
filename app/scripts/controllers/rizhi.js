@@ -20,7 +20,7 @@
 			$(".todayInfo>p").click(function(){
 				$(this).css("background","#1B6D85").siblings("p").css("background","#0D648E");
 				$(".todayInfo>ul").css("display","none");
-				$(".todayInfo>ul").eq($(this).index()).css("display","block")
+				$(".todayInfo>ul").eq($(this).index()).css("display","block");
 			})
 		})
 	})
