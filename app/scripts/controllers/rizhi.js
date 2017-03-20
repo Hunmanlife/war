@@ -14,7 +14,6 @@
 				$(".todayInfo").css("display","none");
 				$(".todayInfo").eq($(this).index()).css("display","block");
 			})
-			
 			$(".todayInfo>p").eq(0).css("background","#1B6D85");
 			$(".todayInfo>ul").eq(0).css("display","block");
 			$(".todayInfo>p").click(function(){
