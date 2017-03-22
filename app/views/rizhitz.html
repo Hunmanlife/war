@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		日志通知
-	</body>
-</html>
+	<li ng-repeat="News in NewsInfos.slice().reverse()" style="list-style: none;">
+		<div class="headInfo">
+			<p>{{News.nicheng}}:收</p><span>{{Newsclassifys[$index]}}</span>
+		</div>
+		<div class="Info">
+			<p>{{Newsa[$index]}}：<span>{{News.wancheng}}</span></p>
+			<p>{{Newsb[$index]}}：<span>{{News.weiwancheng}}</span></p>
+			<p>{{Newsc[$index]}}：<span>{{News.beizhu}}</span></p>
+		</div>
+		<div class="footInfo">
+			<span>{{News.time}}</span>
+		</div>
+	</li>

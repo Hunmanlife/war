@@ -6,18 +6,51 @@
 			</div>
 			<div class="nav">
 				<div class="userImg">
-					O(∩_∩)O
+					{{nichengs}}
 				</div>
 				<div class="navlist">
-					<li ui-sref=".News"><span class="glyphicon glyphicon-comment"></span>News</li>
-					<li ui-sref=".user"><span class="glyphicon glyphicon-user"></span>User</li>
+					<li ui-sref=".News" ng-click="news()"><span class="glyphicon glyphicon-comment"></span>News</li>
+					<li ng-click="user()"><span class="glyphicon glyphicon-user"></span>User</li>
 					<li ui-sref=".todayNews" ng-click="tiao()"><span class="glyphicon glyphicon-tasks"></span>Work</li>
-					<p><a href="https://exmail.qq.com/login"><span class="glyphicon glyphicon-envelope"></span><span>Email</span></a></p>
-					<p><span class="glyphicon glyphicon-th-large"></span>More</p>
-					<p class="add-person"><span class="glyphicon glyphicon-plus"></span> Add</p>	
+					<p ng-click="emi()"><a href="https://exmail.qq.com/login"><span class="glyphicon glyphicon-envelope"></span><span>Email</span></a></p>
+					<p class="ctrl" ng-click="more()"><span class="glyphicon glyphicon-th-large"></span>More</p>
+					<p ng-click="ads()" ng-show="isshow" ui-sref=".Add" class="add-person"><span class="glyphicon glyphicon-plus"></span> Add</p>	
 				</div>
 			</div>
+			
+			<!--wang-->
+			
+			<div class="end" ng-show="isHide">
+				<ul>
+					<li class="one" ng-click="tab()">个人设置</li>
+					<li class="two" ng-click="psd()">修改密码</li>
+					<li class="three" ng-click="tui()">退出登录</li>
+				</ul>
+			</div>
+				<div class="tab" ng-show="isTab">
+					<h3>个人资料 <span class="span" ng-click="tabsubs()">×</span></h3>
+					昵称：<input type="text" class="inp1" ng-model="nichengs">
+					<input type="submit" value="确定" class="inp2" ng-click="tabsub()"/>
+				</div>
+ 				<div class="psd" ng-show="isPsd">
+					<h3>修改密码 <span class="span" ng-click="psdsubs()">×</span></h3>
+					<form>
+						<span>原密码：</span><input type="text" class="ip1" ng-blur="guangbiao()">
+						<span>新密码：</span><input type="text" class="ip2" placeholder="请输入由英文与数字组成的密码"/>
+						<span>确认新密码：</span><input type="text" class="ip3" placeholder="请与新密码保持一致">
+						<input type="submit" value="确认" class="ip4" ng-click="psdsub()"/>
+					</form>
+				</div>
+			<div class="tui" ng-show = "isTui">
+				<h3>退出登录<span class="span" ng-click="tuisubss()">×</span></h3>
+				<p>您确定要退出登录吗？</p>
+				<input type="submit" value="确定" class="btn1" ui-sref=".login"  ng-click="tuisub()"">
+				<input type="submit" value="取消" class="btn2"  ng-click="tuisubs()">
+			</div> 
+			
 			<div class="workShowBg">
 				<ui-view></ui-view>
 			</div>
+			
+
 	</div>

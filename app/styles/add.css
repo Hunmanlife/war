@@ -1,0 +1,67 @@
+*{margin:0px;padding: 0px; }
+
+
+.left h1{line-height:35px;width:100%; text-indent: 20px; font-size:17px;color:floralwhite;background:#0077B0;}
+
+
+.form-group{width:450px;height:30px; line-height: 30px;margin-left:15px;margin-top:10px; position: relative; }
+
+
+.form-group input{float:right;width:280px; height:30px; text-indent: 5px; font-size: 12px;margin-right:50px }
+
+
+ .form-group button{width:100%; background:rgba(255,255,255,0.5); 
+ 					outline:none; 
+ 					 border-radius:7px;}
+
+
+.left i{float:right;position: absolute; right: 0;top:0;}
+
+select{margin-left:35px;font-size:12px; width:90px;height:20px}
+
+
+h2{line-height:40px;width:180px;
+		 background:rgba(000,000,000,0.5);
+		 text-align: center; font-size: 25px;
+		 position: fixed; top:50%;left:50%;
+		 border-radius: 8px;color:#fff;
+		 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -11,6 +11,8 @@
 					password:$scope.passwords
 				}
 			}).then(function(data){
+				console.log(data);
+				localStorage.uid=data.data.uid;
 				$scope.showTitle = "登录成功"
 				$scope.show = true;
 				$state.go("contrain")	
@@ -19,7 +21,7 @@
 				$scope.show = true;
 				$timeout(function(){
 				    $scope.show = false;
-				},3000);
+				},900);
 			})
 		}
 	}])

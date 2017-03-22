@@ -54,6 +54,20 @@ angular
 		url:"/userInfo",
 		templateUrl:"views/userInfo.html"	
 	})
+	//添加
+	.state('contrain.Add',{
+		url:"/contrain/Add",
+		templateUrl:"views/Add.html"	
+	})
+	//联系
+	.state('contrain.lianxi',{
+		url:"/lianxi",
+		templateUrl:"views/lianxi.html"	
+	})
+	.state('contrain.lianxi.xiangq',{
+		url:"/xiangq",
+		templateUrl:"views/xiangq.html"	
+	})
 	$urlRouterProvider.when("","/login")
 }])
 

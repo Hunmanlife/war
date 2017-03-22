@@ -1,129 +1,117 @@
 <div class="info" ng-controller="rizhixq">
 					 
-				
-				<div ng-controller="addPeople" class="addpeople" style="display: none;">
-					<li ng-repeat="people in addPeoples">{{people.username}}</li>
+				<div class="addpeopleB" ng-show="addpeopleBg" ng-controller="addPeople">
+					<div class="addpeople">
+						<li class={{people.id}} ng-click="linePeople($index)" ng-repeat="people in addPeoples">{{people.nicheng}}</li>
+					</div>
 				</div>
+				
 				<div id="todayNews">
 					<ul>
 						<li>发日志</li>
-						<li>我发出的</li>
-						<li>我收到的</li>
+						<li ng-click="postInfo()">我发出的</li>
+						<li ng-click="getInfo()">我收到的</li>
 					</ul>
 				</div>
-				<div class="todayInfo">
-					<p>日报</p>
-					<p>周报</p>
-					<p>月报</p>
+				<div class="todayInfo" ng-controller="todayInfo">
+					<p ng-click="dayInfo($index)">日报</p>
+					<p ng-click="dayInfo($index)">周报</p>
+					<p ng-click="dayInfo($index)">月报</p>
 					<ul>
 						<li>
 							<h3>今日完成工作</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="day.dayFinish"></textarea>
 						</li>
 						<li>
 							<h3>未完成工作</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>需协调的工作</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="day.dayUnFinish"></textarea>
 						</li>
 						<li>
 							<h3>备注</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="day.dayBeizhu"></textarea>
 						</li>
 						<li>
 							<h3>发送给</h3>
-							<a href="javascript:;" class="	glyphicon glyphicon-plus-sign"></a>
+							<input disabled="disabled" class="userShow" ng-model="day.dayFageishui">
+							<a href="javascript:;" ng-click="addPe()" class="glyphicon glyphicon-plus-sign  add"></a>
 						</li>
-						<p>提交</p>
+						<p ng-click="daysubmit()">提交</p>
 					</ul>
 					<ul style="display: none;">
 						<li>
 							<h3>本周完成工作</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="week.weekFinish"></textarea>
 						</li>
 						<li>
 							<h3>本周工作总结</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>下周工作计划</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>需协调与帮助</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="week.weekUnFinish"></textarea>
 						</li>
 						<li>
 							<h3>备注</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="week.weekBeizhu"></textarea>
 						</li>
 						<li>
 							<h3>发送给</h3>
-							<a href="javascript:;" class="	glyphicon glyphicon-plus-sign"></a>
+							<input disabled="disabled" class="userShow" ng-model="week.weekFageishui">
+							<a href="javascript:;" ng-click="addPe()" class="	glyphicon glyphicon-plus-sign add"></a>
 						</li>
-						<p>提交</p>
+						<p ng-click="weeksubmit()">提交</p>
 					</ul>
 					<ul style="display: none;">
 						<li>
 							<h3>本月工作计划</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="month.monthFinish"></textarea>
 						</li>
 						<li>
 							<h3>本月工作总结</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>下月工作计划</h3>
-							<div contenteditable="true"></div>
-						</li>
-						<li>
-							<h3>需帮助与支持</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="month.monthUnFinish"></textarea>
 						</li>
 						<li>
 							<h3>备注</h3>
-							<div contenteditable="true"></div>
+							<textarea ng-model="month.monthBeizhu"></textarea>
 						</li>
 						<li>
 							<h3>发送给</h3>
-							<a href="javascript:;" class="	glyphicon glyphicon-plus-sign"></a>
+							<input disabled="disabled" class="userShow" ng-model="month.monthFageishui">
+							<a href="javascript:;" ng-click="addPe()" class="	glyphicon glyphicon-plus-sign  add"></a>
 						</li>
-						<p>提交</p>
+						<p ng-click="monthsubmit()">提交</p>
 					</ul>
 				</div>
+				<!--//我发送的-->
 				<div class="todayInfo todayInfo_post" style="display: none;">
-					<li>
+					<li ng-repeat="postInfo in postInfos.slice().reverse()">
 						<div class="headInfo">
-							<p>二狗</p><span>月报</span>
+							<p>{{postUser}}</p><span>{{classifys[$index]}}</span>
 						</div>
 						<div class="Info">
-							<p>本月工作计划：<span>1234</span></p>
-							<p>本月工作总结：<span>1234</span></p>
-							<p>下月工作计划：<span>1234</span></p>
+							<p>{{Infosa[$index]}}：<span>{{postInfo.wancheng}}</span></p>
+							<p>{{Infosb[$index]}}：<span>{{postInfo.weiwancheng}}</span></p>
+							<p>{{Infosc[$index]}}：<span>{{postInfo.beizhu}}</span></p>
 						</div>
 						<div class="footInfo">
-							<span>03月15日 08:21</span>
-							<button>查看详情</button>
+							<span>{{postInfo.time}}</span>
 						</div>
 					</li>
 				</div>
+				<!--//我接收的-->
 				<div class="todayInfo todayInfo_get" style="display: none;">
-					<li>
+					<li ng-repeat="getInfo in getInfos.slice().reverse()">
 						<div class="headInfo">
-							<p>二狗</p><span>月报</span>
+							<p>{{getNichengs[$index]}}</p><span>{{classifys[$index]}}</span>
 						</div>
 						<div class="Info">
-							<p>本月工作计划：<span>1234</span></p>
-							<p>本月工作总结：<span>1234</span></p>
-							<p>下月工作计划：<span>1234</span></p>
+							<p>{{Infosa[$index]}}：<span>{{getInfo.wancheng}}</span></p>
+							<p>{{Infosa[$index]}}：<span>{{getInfo.weiwancheng}}</span></p>
+							<p>{{Infosa[$index]}}：<span>{{getInfo.beizhu}}</span></p>
 						</div>
 						<div class="footInfo">
-							<span>03月15日 08:21</span>
-							<button>查看详情</button>
-							<button>删除</button>
+							<span>{{getInfo.time}}</span>
+							<button ng-click="deleteInfo(getInfo.id)">删除</button>
 						</div>
 					</li>
 				</div>
+</div>
+<div class="alertInfo" ng-show="alertInfo" ng-model="alertMessage">
+	{{alertMessage}}
 </div>
