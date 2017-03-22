@@ -260,21 +260,32 @@ $scope.tuisubss = function(){
 		}
 		
 		
-//		$http({
-//			url:"http://47.88.16.225:402/users",
-//			method:"get"
-//		}).then(function(data){					
-//			for(var i=0;i<data.data.length;i++){
-//				if(data.data[i].id == localStorage.ID){
-//					if(data.data[i].isadmin==1){
-//						$scope.isshow = true
-//					}else{
-//						$scope.isshow = false
-//					}
-//				}
-//
-//			}			
-//	})	
+//  修改
+	$scope.xg=function(){
+		$(".ul li input").attr("disabled",false).css("background","#ccc")
+		$scope.isShow1=false
+		$scope.isShow2=true
+	}
+	$scope.qd=function(id){
+		console.log(id)
+		$(".ul li input").attr("disabled",true).css("background","transparent")
+		$scope.isShow1=true
+		$scope.isShow2=false;
+		$http({
+			url:"http://47.88.16.225:402/users/"+id,
+			method:"put",
+			data:{
+				nicheng:$scope.c.nicheng,
+				tel:$scope.c.tel,
+				jinjilianxiren:$scope.c.jinjilianxiren,
+				jinjilianxirendianhua:$scope.c.jinjilianxirendianhua
+			}
+		}).then(function(data){
+			console.log(data)
+			$scope.user()
+		})
+	}
+		$scope.isShow1=true
 
 
 function Isadmin(){

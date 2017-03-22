@@ -1,4 +1,4 @@
-<div class="info">
+<!--<div class="info">
 	<ul class="ul">
 		<li>昵称:<span>{{c.nicheng}}</span></li>
 		<li>tel:<span>{{c.tel}}</span></li>
@@ -16,4 +16,36 @@
 		font-family: "微软雅黑";
 		font-size: 20px;
 	}
+</style>-->
+<div class="info">
+	<ul class="ul">
+		<li><span>昵称:</span><input type="text" disabled="true" ng-model="c.nicheng"></li>
+		<li><span>tel:</span><input type="text" disabled="true" ng-model="c.tel"></li>
+		<li><span>紧急联系人:</span><input type="text" disabled="true" ng-model="c.jinjilianxiren"></li>
+		<li><span>紧急联系人电话:</span><input type="text" disabled="true" ng-model="c.jinjilianxirendianhua"></li>
+		<li><span>职 位:</span><span>{{zz}}</span><li>
+	</ul>
+	<button ng-click='del(c.id)'>删除</button>
+	<button ng-if="isShow1" ng-click='xg()'>修改</button>
+	<button ng-if="isShow2" ng-click='qd(c.id)'>确定</button>
+</div>
+<style>
+	.ul li{
+		line-height: 30px;
+		background: cadetblue;
+		margin:10px 0;
+		font-family: "微软雅黑";
+		font-size: 20px;
+	}
+	.ul li span{
+		display:inline-block;
+		width:180px;
+		height:30px;
+		
+	}
+	.ul li input{
+		background: transparent;
+		border: none;
+	}
 </style>
+

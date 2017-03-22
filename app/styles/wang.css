@@ -124,6 +124,7 @@ input:focus {
 	position:absolute;
 	top:calc(50% - 20px);
 	left:calc(50% - 100px);
+	display: none;
 }
 .chsh >p{
 	width: 100%;
