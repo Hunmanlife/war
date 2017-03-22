@@ -35,16 +35,21 @@
  				<div class="psd" ng-show="isPsd">
 					<h3>修改密码 <span class="span" ng-click="psdsubs()">×</span></h3>
 					<form>
-						<span>原密码：</span><input type="text" class="ip1" ng-blur="guangbiao()">
-						<span>新密码：</span><input type="text" class="ip2" placeholder="请输入由英文与数字组成的密码"/>
-						<span>确认新密码：</span><input type="text" class="ip3" placeholder="请与新密码保持一致">
+						
+						<span>新密码：</span><input type="text" class="ip2" placeholder="请输入由英文与数字组成的密码" ng-model="ispassword" ng-blur="yanzheng()">
+						<span>确认新密码：</span><input type="text" class="ip3" placeholder="请与新密码保持一致" ng-model="isspassword" ng-blur="guangbiao()">
 						<input type="submit" value="确认" class="ip4" ng-click="psdsub()"/>
 					</form>
+					<div class="chsh" ng-show="show">
+							<p>
+								{{showTitle}}
+							</p>
+					</div>
 				</div>
 			<div class="tui" ng-show = "isTui">
 				<h3>退出登录<span class="span" ng-click="tuisubss()">×</span></h3>
 				<p>您确定要退出登录吗？</p>
-				<input type="submit" value="确定" class="btn1" ui-sref=".login"  ng-click="tuisub()"">
+				<input type="submit" value="确定" class="btn1" ng-click="tuisub()"">
 				<input type="submit" value="取消" class="btn2"  ng-click="tuisubs()">
 			</div> 
 			

@@ -74,19 +74,50 @@
 			$scope.isPsd=true
 			$scope.isHide=false
 		}
-	$scope.guangbiao = function(){
-		$http({
-			url:"http://47.88.16.225:402/users/"+localStorage.uid,
-			method:"get"
-		}).then(function(data){
-			console.log(data.data.password)
-		})
-	}
+
+	var passs = $scope.ispassword
 
 		$scope.psdsub = function(){
-				$scope.isHide=false
-				$scope.isTab=false
-				$scope.isPsd=false
+			var psd=/^[a-zA-Z]\w{6,17}$/;//密码验证
+			var passs = $scope.ispassword
+				if(!passs){
+						console.log("内容不能为空")
+				}else{
+					if(passs.match(psd)){
+						console.log("密码格式正确")
+						if($scope.isspassword==$scope.ispassword){
+							
+				$http({
+					url:"http://47.88.16.225:402/users/"+localStorage.uid,
+					method:"put",
+					data:{
+						password:$scope.ispassword
+					}
+				}).then(function(data){
+					$scope.showTitle="修改成功"
+					$scope.show=true;
+					$timeout(function(){
+						$scope.show=false
+					},600)
+					$timeout(function(){
+						$scope.isPsd=false
+					},800)
+				},function(){
+					console.log(cuola)
+				})
+
+							console.log("修改成功");
+							
+						}else{
+							console.log("修改bu成功")
+							$scope.isspassword = "密码不一致"
+						}
+					}else{
+						$scope.ispassword = "密码格式有误"
+						console.log("密码格式有误")
+					}
+				}
+			
 		}
 
 // tui
@@ -111,10 +142,14 @@ $scope.isTui = false;
 				$scope.isPsd=false
 				$scope.isTui=false
 				$http({
-					url:"http://47.88.16.225:402/users/logint",
+					url:"http://47.88.16.225:402/users/logout",
 					method:"post"
 				}).then(function(data){
 					console.log(data)
+					localStorage.userName="";
+					localStorage.uid="";
+					localStorage.nicheng="";
+					$state.go('denglu')
 				},function(){
 					console.log(123)
 				})
