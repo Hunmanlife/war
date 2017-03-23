@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../styles/chuchai.css" />
+		<script type="text/javascript" src="../scripts/controllers/PCASClass.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="chuchai">
+		<div class="hade">
+			<span class="glyphicon glyphicon-circle-arrow-left" ui-sref="contrain.todayNews.shenpixq">出差</span>
+		</div>
+		<div class="w_cont">
+			<li>出差地点：</li>
+			<select name="P1" ng-modle="shen" class="pp"></select>
+			<select name="C1" ng-modle="shi" class="cc"></select>
+			<li>*开始时间：</li><input type="date" ng-model="kaishi"/>
+			<li>*结束时间：</li><input type="date" ng-model="jieshu">
+			<!--<li>*时长(天)：</li><input type="text" placeholder="请输入(必填)" />-->
+			<li>*出差事由：</li><input type="text" placeholder="请输入出差事由" ng-model="chuchaishiyou"/>
+			<input type="button" value="添加审批人" class="enter shenpiren" ng-model="shenpiren" ng-click="spr()"/>
+			<div class="liebiaobiao" ng-if="isShow">
+			<ul class="liebiao" ng-repeat="a in addPeoples">
+			<li ng-click="add($index)">{{a.nicheng}}</li>
+			</ul>
+			</div>
+			<input type="submit" class="del" ng-click="tijiao()">
+		</div>
+		</div>
+	</body>
+
+	<script>
+		new PCAS("P1", "C1");
+		new PCAS("P2", "C2", "吉林省");
+		new PCAS("P3", "C3", "江苏省", "苏州市");
+		new PCAS("province", "city", "area", "吉林省", "白城市", "大安市");
+		new PCAS("province1", "city1", "area1", "吉林省", "吉林市", "龙潭区");
+		new PCAS("province2", "city2", "area2", "江苏省", "苏州市", "沧浪区");
+		new PCAS("province3", "city3", "area3");
+		new PCAS("province4", "city4", "area4", "江苏省");
+		new PCAS("province5", "city5", "area5", "江苏省", "苏州市");
+		new PCAS("province6", "city6", "area6", "江苏省", "苏州市", "沧浪区");
+	</script>
+
+</html>

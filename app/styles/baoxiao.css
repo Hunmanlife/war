@@ -1,0 +1,90 @@
+.headers{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #B3B3B3;
+}
+.headers span{
+	font-size: 18px;
+	line-height: 50px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+.w_cont{
+	width: 750px;
+	height: 500px;
+	position: absolute;
+	left: 28%;
+}
+.w_cont input{
+	width: 500px;
+	height: 40px;
+	margin-left: 150px;
+	margin-top: 40px;
+	border-radius: 5px;
+	outline: none;
+	padding: 5px 0;
+}
+.w_cont li{
+	position: absolute;
+	list-style: none;
+	margin-top: 30px;
+	margin-left: 10px;
+	line-height: 60px;
+}
+.w_cont .enter{
+	width: 200px;
+	height: 30px;
+	background: #337AB7;
+	outline: none;
+	border: none;
+	color: white;
+}
+.w_cont .del{
+	background: #0D648E;
+	outline: none;
+	border: none;
+	color: white;
+	font-weight: bold;
+}
+.liebiao{
+	width: 150px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+}
+.liebiao li{
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	background: #0D648E;
+	text-align: center;
+	color: #fff;
+	
+}
+.liebiaobiao{
+	width: 150px;
+	height: 200px;
+	overflow-x: hidden;
+	position: fixed;
+	left: 50%;
+	margin-top: -100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

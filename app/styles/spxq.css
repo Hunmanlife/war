@@ -1,0 +1,122 @@
+.spxq{
+	
+	width: 760.25px;
+	height: 100%;
+	background: rgba(13,100,142,0.3);
+	float: left;
+}
+.navgj{
+	width:100%;
+	height: 40px;
+	background: rgba(13,100,142,0.3);
+		margin-top: 0.5px;
+}
+.navgj li{
+	width: 25%;
+	height: 40px;
+	float: left;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	background: #0D648E;
+	cursor: pointer;
+}
+.alicdn{
+	width: 100%;
+	height: auto;
+
+}
+.alicdn ul{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.alicdn ul li{
+	width: 200px;
+	height: 120px;
+	border: 1px solid #666;
+	text-align: center;
+	background: #fff;
+	margin-top: 25px;
+	border-radius: 10px;
+	}
+.alicdn ul li img{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+.alicdn ul li span{
+	width: 100%;
+	height: 30px;
+	display: block;
+	margin-top: 5px;
+	line-height: 30px;
+}
+.qingjia{
+	width: 100%;
+	height: 100%;
+}
+.qingjia div{
+	width: 100%;
+	padding: 20px 0px;
+	
+}
+.qingjia div span{
+	width: 100px;
+	display: inline-block;
+	text-align: center;
+	background: #0D648E;
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+
+}
+.qingjia div textarea{
+	width:500px;
+	height: 100px;
+	margin-left: 10px;
+	border: 1px solid #fff;
+	outline: none;
+	position: absolute;
+}
+.qingjia div input{
+	width: 200px;
+	background: transparent;
+	margin-left: 10px;
+	outline: none;
+	height: 30px;
+}
+.qingjia .sppp{
+	width: 500px;
+	height: 100px;
+}
+.liebiao{
+	width: 150px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	}
+.liebiao li{
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	background: #0D648E;
+	text-align: center;
+	color: #fff;
+	
+}
+.liebiaobiao{
+	width: 150px;
+	height: 200px;
+	overflow-x: hidden;
+	position: fixed;
+	left: 50%;
+	margin-top: -100px;
+}

@@ -1,8 +1,6 @@
 angular.module('App')
 	//我发送的
 	.controller("rizhixq",["$scope","$http","$state","$timeout",function($scope,$http,$state,$timeout){	
-		//添加联系人界面初始隐藏
-		$scope.addpeopleBg=false;
 		//发送de
 		$scope.classifys=[];
 		$scope.Infosa=[];
@@ -89,7 +87,24 @@ angular.module('App')
 						}
 					})
 				}
-				classify()
+				for (var i=0;i<$scope.getInfos.length;i++) {
+					if($scope.getInfos[i].classify==0){
+						$scope.classifys.unshift("日报");
+						$scope.Infosa.unshift("今日完成工作");
+						$scope.Infosb.unshift("未完成工作");
+						$scope.Infosc.unshift("备注");
+					}else if($scope.getInfos[i].classify==1){
+						$scope.classifys.unshift("周报");
+						$scope.Infosa.unshift("本周完成工作");
+						$scope.Infosb.unshift("本周工作总结");
+						$scope.Infosc.unshift("备注");
+					}else if($scope.getInfos[i].classify==2){
+						$scope.classifys.unshift("月报");
+						$scope.Infosa.unshift("本月工作计划");
+						$scope.Infosb.unshift("本月工作总结");
+						$scope.Infosc.unshift("备注");
+					}
+				}
 			})
 		}
 		$scope.deleteInfo=function(id){
@@ -101,10 +116,12 @@ angular.module('App')
 			})
 		}
 		$scope.addPe=function(){
-			console.log(1234)
-			$scope.addpeopleBg=true;
+			$(function(){
+				$(".addpeopleB").css("display","block");
+			})
+			
+//			$scope.addpeopleBg=!$scope.addpeopleBg;
 		}
-		
 		$(function(){
 			//发日志，我发送的，我接收的
 			$("#todayNews>ul>li").eq(0).css("background","#31708F");
@@ -139,16 +156,17 @@ angular.module('App')
 			}
 			$scope.addPeoples=$scope.peoples;	
 			$scope.linePeople=function($index){	
-				$scope.addpeopleBg=false;
 				console.log($scope.addPeoples[$index].nicheng)
 				var user=$scope.addPeoples[$index].nicheng
 				localStorage.nicheng=$scope.addPeoples[$index].nicheng
 				var userId=$scope.addPeoples[$index].id
 				$(function(){
-					$(".add").css("display","none");
-					$(".userShow").val(user).attr("class",userId);
+//					$(".userShow").val(user).attr("class",userId);
 					localStorage.userName=$scope.addPeoples[$index].id;
+					$(".userShow").val(localStorage.nicheng);
+					$(".addpeopleB").css("display","none")
 				})
+				
 			}
 		})			
 	}])
@@ -177,7 +195,7 @@ angular.module('App')
 				$scope.day.dayFageishui="";
 				$scope.alertMessage = "提交成功"
 				$scope.alertInfo = true;
-				$(".add").css("display","block");
+//				$(".add").css("display","block");
 				$timeout(function(){
 				    $scope.alertInfo = false;
 				},900);

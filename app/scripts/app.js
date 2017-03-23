@@ -32,6 +32,22 @@ angular
 		url:"/shenpixq",
 		templateUrl:"views/shenpixq.html"	
 	})
+	.state('contrain.todayNews.qingjia',{
+		url:"/qingjia",
+		templateUrl:"views/qingjia.html"
+	})
+	.state('contrain.todayNews.baoxiao',{
+		url:"/baoxiao",
+		templateUrl:"views/baoxiao.html"
+	})
+	.state('contrain.todayNews.chuchai',{
+		url:"/chuchai",
+		templateUrl:"views/chuchai.html"
+	})
+	.state('contrain.todayNews.lizhi',{
+		url:"/lizhi",
+		templateUrl:"views/lizhi.html"
+	})
 	//通知
 	.state('contrain.News',{
 		url:"/News",

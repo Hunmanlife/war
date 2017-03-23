@@ -12,13 +12,13 @@
 				}
 			}).then(function(data){
 				console.log(data);
+				$scope.show = true;
 				localStorage.uid=data.data.uid;
 				$scope.showTitle = "登录成功"
-				$scope.show = true;
 				$state.go("contrain")	
 			},function(data){
-				$scope.showTitle = "请输入正确的手机号"
 				$scope.show = true;
+				$scope.showTitle = "请输入正确的手机号"
 				$timeout(function(){
 				    $scope.show = false;
 				},900);

@@ -1,5 +1,6 @@
 	<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="../styles/container.css"/>
+	<link rel="stylesheet" type="text/css" href="../styles/spxq.css"/>
 	<div class="content" ng-controller="contrain">
 			<div class="logo">
 				<img src="../images/logo1.gif"/>
@@ -29,15 +30,15 @@
 			</div>
 				<div class="tab" ng-show="isTab">
 					<h3>个人资料 <span class="span" ng-click="tabsubs()">×</span></h3>
-					昵称：<input type="text" class="inp1" ng-model="nichengs">
+					<li>昵称：</li><input type="text" class="inp1" ng-model="nichengs">
 					<input type="submit" value="确定" class="inp2" ng-click="tabsub()"/>
 				</div>
  				<div class="psd" ng-show="isPsd">
 					<h3>修改密码 <span class="span" ng-click="psdsubs()">×</span></h3>
 					<form>
 						
-						<span>新密码：</span><input type="text" class="ip2" placeholder="请输入由英文与数字组成的密码" ng-model="ispassword" ng-blur="yanzheng()">
-						<span>确认新密码：</span><input type="text" class="ip3" placeholder="请与新密码保持一致" ng-model="isspassword" ng-blur="guangbiao()">
+						<li>新密码：</li><input type="text" class="ip2" placeholder="请输入由英文与数字组成的密码" ng-model="ispassword" ng-blur="yanzheng()">
+						<li>确认新密码：</li><input type="text" class="ip3" placeholder="请与新密码保持一致" ng-model="isspassword" ng-blur="guangbiao()">
 						<input type="submit" value="确认" class="ip4" ng-click="psdsub()"/>
 					</form>
 					<div class="chsh" ng-show="show">

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../styles/lizhi.css" />
+	</head>
+	<body>
+		<div  ng-controller="lizhi">
+		<div class="hade">
+			<span class="glyphicon glyphicon-circle-arrow-left" ui-sref="contrain.todayNews.shenpixq">离职</span> 
+		</div>
+		<div class="w_cont">
+		
+			<li>入职日期：</li><input type="date" placeholder="" ng-model="kaishi"/>
+			<li>离职日期：</li><input type="date" placeholder="" ng-model="jieshu"/>
+			<li>离职原因：</li><input type="text" placeholder="请输入(必填)" ng-model="yuanyin"/>
+			<input type="button" value="添加审批人" class="enter shenpiren" ng-model="shenpiren" ng-click="spr()"/>
+				<div class="liebiaobiao" ng-if="isShow">
+				<ul class="liebiao" ng-repeat="a in addPeoples">
+					<li ng-click="add($index)">{{a.nicheng}}</li>
+				</ul>
+				</div>
+			<input type="submit" class="del" ng-click="tijiao()">
+		</div>
+		</div>
+	</body>
+</html>

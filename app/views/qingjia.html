@@ -1,0 +1,17 @@
+<div ng-controller="qingjia" class="qingjia">
+	<span ui-sref="contrain.todayNews.shenpixq" style="font-size: 24px;" class="sppp"><i class="glyphicon glyphicon-circle-arrow-left"></i>请假</span>
+		<div><span>请假类型</span><input type="text" ng-model="leixing"/></div>
+		<div><span>开始时间</span><input type="date" ng-model="kaishi"/></div>
+		<div><span>结束时间</span><input type="date" ng-model="jieshu"/></div>
+		<div><span>请假事由</span><textarea name="" rows="" cols="" ng-model="shiyou"></textarea></div>
+		<div style="margin-top: 80px;"><span>审批人</span><input type="button" value="添加审批人" class="enter shenpiren" ng-model="shenpiren" ng-click="spr()"/></div>
+		
+			<div class="liebiaobiao" ng-if="isShow">
+			<ul class="liebiao" ng-repeat="a in addPeoples">
+			<li ng-click="add($index)">{{a.nicheng}}</li>
+			</ul>
+			</div>
+		<button ng-click="xx()">提交</button>
+</div>	
+		
+

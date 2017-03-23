@@ -1,7 +1,192 @@
   angular.module('App')
 	.controller("contrain",["$scope","$http","$state","$rootScope","$timeout",function($scope,$http,$state,$rootScope,$timeout){
 		
+		$scope.isShow1=true
+		$scope.show1=function(){
+			$scope.isShow1=true
+			$scope.isShow2=false
+			$scope.isShow3=false
+			$scope.isShow4=false
+		}
+		$scope.show2=function(){
+			$scope.isShow2=true
+			$scope.isShow1=false
+			$scope.isShow3=false
+			$scope.isShow4=false
+			$http({
+   				url: "http://47.88.16.225:402/qingjia",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwsp=[]
+   				console.log($scope.dwsp) 
+   				
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="1"){
+   						$scope.dwsp.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/chuchai",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwspone=[]
+   				console.log($scope.dwspone) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="1"){
+   						$scope.dwspone.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/baoxiao",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwsptwo=[]
+   				console.log($scope.dwsptwo) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="1"){
+   						$scope.dwsptwo.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/lizhishenqing",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwspthere=[]
+   				console.log($scope.dwspthere) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="1"){
+   						$scope.dwspthere.push(data.data[i])
+   					}
+   				}
+   			})
+		}
+		$scope.show3=function(){
+			$scope.isShow3=true
+			$scope.isShow2=false
+			$scope.isShow1=false
+			$scope.isShow4=false
+			$http({
+   				url: "http://47.88.16.225:402/qingjia",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwsp=[]
+   				console.log($scope.dwsp) 
+   				
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="2"||data.data[i].zhuangtai=="3"){
+   						$scope.dwsp.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/chuchai",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwspone=[]
+   				console.log($scope.dwspone) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="2"||data.data[i].zhuangtai=="3"){
+   						$scope.dwspone.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/baoxiao",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwsptwo=[]
+   				console.log($scope.dwsptwo) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="2"||data.data[i].zhuangtai=="3"){
+   						$scope.dwsptwo.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/lizhishenqing",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwspthere=[]
+   				console.log($scope.dwspthere) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].zhuangtai=="2"||data.data[i].zhuangtai=="3"){
+   						$scope.dwspthere.push(data.data[i])
+   					}
+   				}
+   			})
+		}
+		$scope.show4=function(){
+			$scope.isShow4=true
+			$scope.isShow2=false
+			$scope.isShow3=false
+			$scope.isShow1=false
+			$http({
+   				url: "http://47.88.16.225:402/qingjia",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwsp=[]
+   			
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].uid==localStorage.uid){
+   						$scope.dwsp.push(data.data[i])
+   					
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/chuchai",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwspone=[]
+   				console.log($scope.dwspone) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].uid==localStorage.uid){
+   						$scope.dwspone.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/baoxiao",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwsptwo=[]
+   				console.log($scope.dwsptwo) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].uid==localStorage.uid){
+   						$scope.dwsptwo.push(data.data[i])
+   					}
+   				}
+   			})
+   			$http({
+   				url: "http://47.88.16.225:402/lizhishenqing",
+   				method: "get",
+   				
+   			}).then(function(data) {
+   				$scope.dwspthere=[]
+   				console.log($scope.dwspthere) 
+   				for (var i=0;i<data.data.length;i++) {
+   					if(data.data[i].uid==localStorage.uid){
+   						$scope.dwspthere.push(data.data[i])
+   					}
+   				}
+   			})
+		}
 	// huoqunicheng
+	
 	$http({
 			url:"http://47.88.16.225:402/users/"+localStorage.uid,
 			method:"get"
@@ -340,7 +525,11 @@ function Isadmin(){
 		$scope.Nicheng=function(){
 			if($scope.nicheng==undefined){
 				$scope.unicheng=true
-			}else{
+			}
+			else if($scope.nicheng==""){
+				$scope.unicheng=true
+			}
+			else{
 				$scope.unicheng=false
 			}
 	

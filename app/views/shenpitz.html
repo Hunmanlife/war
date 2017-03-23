@@ -3,8 +3,45 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../styles/shenpitz.css"/>
 	</head>
 	<body>
-		审批通知
+		<div ng-controller="shenpitz">
+			<ul class="biaoti">
+				<li>审批标题</li>
+				<li>审批摘要</li>
+				<li>开始时间</li>
+				<li>结束时间</li>
+				<li>状态</li>
+			</ul>
+			<ul class="neirong" ng-repeat="a in dwsp">
+				<li>陈颖志的{{a.zleixing}}</li>
+				<li>请假类型:{{a.leixing}}</li>
+				<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.jieshushijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.zhuangtai | resetCategory}}</li>
+			</ul>
+			<ul class="neirong" ng-repeat="a in dwspone">
+				<li>陈颖志的{{a.zleixing}}</li>
+				<li>地点:{{a.chuchaididian}}</li>
+				<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.jieshushijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.zhuangtai | resetCategory}}</li>
+			</ul>
+			<ul class="neirong" ng-repeat="a in dwsptwo">
+				<li>陈颖志的{{a.zleixing}}</li>
+				<li>金额:{{a.baoxiaojine}}(元)</li>
+				<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.jieshushijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.zhuangtai | resetCategory}}</li>
+			</ul>
+			<ul class="neirong" ng-repeat="a in dwspthere">
+				<li>陈颖志的{{a.zleixing}}</li>
+				<li>离职</li>
+				<li>{{a.ruzhishijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.lizhishijian | date:"yyyy年M月d日"}}</li>
+				<li>{{a.zhuangtai | resetCategory}}</li>
+			</ul>
+		</div>
 	</body>
 </html>

@@ -1,0 +1,226 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+.gohome{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #B3B3B3;
+	border-top: 1px solid #B3B3B3;
+	margin-top: 10px;	
+}
+.gohome .ulone {
+	
+}
+.gohome .ulone li{
+	float: left;
+	line-height: 50px;
+	font-size:14px ;
+	font-weight: bold;
+	color: white;
+	
+	text-align: center;
+}
+.gohome .ulone li:nth-child(1){
+	width: 100px;
+}
+.gohome .ulone li:nth-child(2){
+	width: 200px;
+}
+.gohome .ulone li:nth-child(3){
+	width: 200px;
+}
+.gohome .ulone li:nth-child(4){
+	width: 120px;
+}
+.gohome .ulone li:nth-child(5){
+	width:120px;
+}
+.two{
+	width: 100%;
+	height: 458px;
+	overflow-y: scroll;
+}
+.two .ultwo{
+	width: 100%;
+	height: 50px;
+	background: white;
+	margin-top: 5px;
+}
+.two .ultwo li{
+	float: left;
+	text-align: center;
+	line-height: 50px;
+}
+.two .ultwo li:nth-child(1){
+	width: 100px;
+}
+.two .ultwo li:nth-child(2){
+	width: 200px;
+}
+.two .ultwo li:nth-child(3){
+	width: 200px;
+}
+.two .ultwo li:nth-child(4){
+	width: 120px;
+}
+.two .ultwo li:nth-child(5){
+	width:120px;
+}
+.godel{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #B3B3B3;
+	border-top: 1px solid #B3B3B3;
+	margin-top: 10px;	
+}
+.godel .ulone {
+}
+.godel .ulone li{
+	float: left;
+	line-height: 50px;
+	font-size:14px ;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+.godel .ulone li:nth-child(1){
+	width: 100px;
+}
+.godel .ulone li:nth-child(2){
+	width: 200px;
+}
+.godel .ulone li:nth-child(3){
+	width: 200px;
+}
+.godel .ulone li:nth-child(4){
+	width: 120px;
+}
+.godel .ulone li:nth-child(5){
+	width:120px;
+}
+.numtwo{
+	width: 100%;
+	height: 458px;
+	overflow-y: scroll;
+}
+.numtwo .ultwo{
+	width: 100%;
+	height: 50px;
+	background: white;
+	margin-top: 5px;
+}
+.numtwo .ultwo li{
+	float: left;
+	line-height: 50px;
+	text-align: center;
+
+}
+.numtwo .ultwo li:nth-child(1){
+	width: 100px;
+}
+.numtwo .ultwo li:nth-child(2){
+	width: 200px;
+}
+.numtwo .ultwo li:nth-child(3){
+	width: 200px;
+}
+.numtwo .ultwo li:nth-child(4){
+	width: 120px;
+}
+.numtwo .ultwo li:nth-child(5){
+	width:120px;
+}
+
+.enter{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #B3B3B3;
+	border-top: 1px solid #B3B3B3;
+	margin-top: 10px;	
+}
+.enter .ulone {
+
+}
+.enter .ulone li{
+	float: left;
+	line-height: 50px;
+	font-size:14px ;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+.enter .ulone li:nth-child(1){
+	width: 100px;
+}
+.enter .ulone li:nth-child(2){
+	width: 200px;
+}
+.enter .ulone li:nth-child(3){
+	width: 200px;
+}
+.enter .ulone li:nth-child(4){
+	width: 120px;
+}
+.enter .ulone li:nth-child(5){
+	width:120px;
+}
+.tabtwo{
+	width: 100%;
+	height: 458px;
+	overflow-y: scroll;
+}
+.tabtwo .ultwo{
+	width: 100%;
+	height: 50px;
+	background: white;
+	margin-top: 5px;
+}
+.tabtwo .ultwo li{
+	float: left;
+	
+	line-height: 50px;
+	text-align: center;
+}
+.tabtwo .ultwo li:nth-child(1){
+	width: 100px;
+}
+.tabtwo .ultwo li:nth-child(2){
+	width: 200px;
+}
+.tabtwo .ultwo li:nth-child(3){
+	width: 200px;
+}
+.tabtwo .ultwo li:nth-child(4){
+	width: 120px;
+}
+.tabtwo .ultwo li:nth-child(5){
+	width:120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

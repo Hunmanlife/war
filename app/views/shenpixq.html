@@ -3,8 +3,173 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" href="../styles/daiwoshenpi.css" />
 	</head>
-	<body>
-		oiadiuaufaidwada
+	<body> 
+		<div class="spxq">
+			<ul class="navgj">
+				<li ng-click="show1()">发起审批</li>
+				<li ng-click="show2()">待审批的</li>
+				<li ng-click="show3()">已审批的</li>
+				<li ng-click="show4()">我发起的</li>
+			</ul>
+			<div class="alicdn" ng-if="isShow1">
+				<ul>
+					<li ui-sref="contrain.todayNews.qingjia">
+						<img src="https://gw.alicdn.com/tps/TB1hcBoOpXXXXbPXXXXXXXXXXXX-102-102.png">
+						<span>请假</span>
+					</li>
+					<li ui-sref="contrain.todayNews.baoxiao">
+						<img src="https://gw.alicdn.com/tps/TB1Y57ZOXXXXXXwaXXXXXXXXXXX-102-102.png">
+						<span>报销</span>
+					</li>
+					<li ui-sref="contrain.todayNews.chuchai">
+						<img src="https://gw.alicdn.com/tps/TB1Ez8XOpXXXXa5XpXXXXXXXXXX-102-102.png"/>
+						<span>出差</span>
+					</li>
+					<li ui-sref="contrain.todayNews.lizhi">
+						<img src="https://gw.alicdn.com/tps/TB1ESwQOXXXXXbaaXXXXXXXXXXX-102-102.png"/>
+						<span>离职申请</span>
+					</li>
+					<li>
+						<img src="https://gw.alicdn.com/tps/TB1zXtqOpXXXXa6XXXXXXXXXXXX-102-102.png"/>
+						<span>采购</span>
+					</li>
+					<li>
+						<img src="https://gw.alicdn.com/tps/TB1Y57ZOXXXXXXwaXXXXXXXXXXX-102-102.png"/>
+						<span>付款</span>
+					</li>
+				</ul>
+			</div>
+			<div ng-if="isShow2">
+				<div class="gohome">
+					<ul class="ulone">
+						<li>审批类型</li>
+						<li>开始时间</li>
+						<li>结束时间</li>
+						<li>审批人</li>
+						<li>操作</li>
+					</ul>
+				</div>
+				<div class="two">
+					<ul ng-repeat="a in dwsp" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						
+						<li>{{a.shenpiren}}</li>
+						<li><button style="outline: none;background: transparent;border: 0px;text-decoration: underline;">批阅</button></li>
+					</ul>
+					<ul ng-repeat="a in dwspone" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						
+						<li>{{a.shenpiren}}</li>
+						<li><button style="outline: none;background: transparent;border: 0px;text-decoration: underline;">批阅</button></li>
+					</ul>
+					<ul ng-repeat="a in dwsptwo" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						
+						<li>{{a.shenpiren}}</li>
+						<li><button style="outline: none;background: transparent;border: 0px;text-decoration: underline;">批阅</button></li>
+					</ul>
+					<ul ng-repeat="a in dwspthere" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.ruzhishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.lizhishijian|date:"yyyy年M月d日"}}</li>
+						
+						<li>{{a.shenpiren}}</li>
+						<li><button style="outline: none;background: transparent;border: 0px;text-decoration: underline;">批阅</button></li>
+					</ul>
+				</div>
+			</div>
+			<div ng-if="isShow3">
+				<div class="godel">
+					<ul class="ulone">
+						<li>审批类型</li>
+						<li>开始时间</li>
+						<li>结束时间</li>
+						<li>审批人</li>
+						<li>状态</li>
+					</ul>
+				</div>
+				<div class="numtwo">
+					<ul ng-repeat="a in dwsp" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+					<ul ng-repeat="a in dwspone" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+					<ul ng-repeat="a in dwsptwo" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+					<ul ng-repeat="a in dwspthere" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div ng-if="isShow4">
+				<div class="enter">
+					<ul class="ulone">
+						<li>审批类型</li>
+						<li>开始时间</li>
+						<li>结束时间</li>
+						<li>审批人</li>
+						<li>状态</li>
+					</ul>
+				</div>
+				<div class="tabtwo">
+					
+					<ul ng-repeat="a in dwsp" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+					<ul ng-repeat="a in dwspone" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+					<ul ng-repeat="a in dwsptwo" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+					<ul ng-repeat="a in dwspthere" class="ultwo">
+						<li>{{a.zleixing}}</li>
+						<li>{{a.kaishishijian | date:"yyyy年M月d日"}}</li>
+						<li>{{a.jieshushijian|date:"yyyy年M月d日"}}</li>
+						<li>{{a.shenpiren}}</li>
+						<li>{{a.zhuangtai|resetCategory}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

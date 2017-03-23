@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../styles/baoxiao.css" />
+	</head>
+
+	<body>
+		<div ng-controller="baoxiao">
+			<div class="headers">
+				<span class="glyphicon glyphicon-circle-arrow-left" ui-sref="contrain.todayNews.shenpixq">报销</span>
+			</div>
+			<div class="w_cont">
+				<li>*报销金额(元)：</li><input type="text" placeholder="请输入数字(必填)" ng-model="jine">
+				<li>*开始时间：</li><input type="date" placeholder="如：活动经费、采购经费(必填)" ng-model="kaishi"/>
+				
+				<li>*结束时间：</li><input type="date" placeholder="输入总报销金额(元)" ng-model="jieshu"/>
+				<li>*费用明细：</li><input type="text" placeholder="请输入费用详细描述" ng-model="minxi">
+				<input type="button" value="添加审批人" class="enter shenpiren" ng-model="shenpiren" ng-click="spr()"/>
+				<div class="liebiaobiao" ng-if="isShow">
+				<ul class="liebiao" ng-repeat="a in addPeoples">
+					<li ng-click="add($index)">{{a.nicheng}}</li>
+				</ul>
+				</div>
+				<input type="submit" class="del" ng-click="tijiao()">
+			</div>
+		</div>
+	</body>
+
+</html>
